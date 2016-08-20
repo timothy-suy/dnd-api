@@ -10,14 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function() {
-return 'home';
+Route::get('api/', function() {
+    return response("{data: 'test'}", 200)
+                  ->header('Content-Type', 'text/json');
 });
-
-Route::get('/api/hello', function() {
-	$hello = \App::make("App\Events\Hello");
-	event($hello);
-    return response('event fired', 200)
-                  ->header('Content-Type', 'text/plain');});
 
 ?>
