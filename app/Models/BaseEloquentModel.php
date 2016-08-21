@@ -23,7 +23,6 @@ class BaseEloquentModel extends Eloquent implements DatabaseModelInterface {
 	public function __destruct(...$parentAttributes)
 	{
 		$this->save();
-		return parent::__destruct($parentAttributes);
 	}
 	
     /**

@@ -10,8 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('api/', function() {
-    // return new App\Models\Squares\Square(['name' => 'default_intput', 'width' => 152, 'height' => 152]);
+Route::group(['prefix' => 'api',], function () {
+	Route::get('squares/{id}', 'Squares\SquareController@get');
 });
-
 ?>
