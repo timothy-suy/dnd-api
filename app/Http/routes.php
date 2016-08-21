@@ -11,8 +11,7 @@
 |
 */
 Route::get('api/', function() {
-    return response("{data: 'test'}", 200)
-                  ->header('Content-Type', 'text/json');
+    // return new App\Models\Squares\Square(['name' => 'default_intput', 'width' => 152, 'height' => 152]);
 });
 
 ?>
