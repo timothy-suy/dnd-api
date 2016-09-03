@@ -13,18 +13,6 @@ class BaseEloquentModel extends Eloquent implements DatabaseModelInterface {
     
     public $timestamps = true;
 	
-	public function __construct(array $attributes = array())
-	{
-		parent::__construct($attributes);
-		$this->save();
-		return $this;
-	}
-    
-	public function __destruct(...$parentAttributes)
-	{
-		$this->save();
-	}
-	
     /**
      * Define a belongs-to-through relationship.
      *

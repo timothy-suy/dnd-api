@@ -12,5 +12,6 @@
 */
 Route::group(['prefix' => 'api',], function () {
 	Route::get('squares/{id}', 'Squares\SquareController@get');
+	Route::get('squares', 'Squares\SquareController@set');
 });
 ?>
